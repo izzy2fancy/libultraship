@@ -5,11 +5,6 @@ namespace LUS {
 SDLAudioPlayer::SDLAudioPlayer() : AudioPlayer() {
 }
 
-SDLAudioPlayer::~SDLAudioPlayer() {
-    SPDLOG_TRACE("destruct SDL audio player");
-    SDL_QuitSubSystem(SDL_INIT_AUDIO);
-}
-
 bool SDLAudioPlayer::DoInit(void) {
     if (SDL_Init(SDL_INIT_AUDIO) != 0) {
         SPDLOG_ERROR("SDL init error: %s\n", SDL_GetError());

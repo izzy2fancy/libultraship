@@ -60,8 +60,5 @@
     <None Include="..\..\misc\debuggers\imgui.natvis">
       <Filter>imgui</Filter>
     </None>
-    <None Include="..\..\misc\debuggers\imgui.natstepfilter">
-      <Filter>imgui</Filter>
-    </None>
   </ItemGroup>
 </Project>

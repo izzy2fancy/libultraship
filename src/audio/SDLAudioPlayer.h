@@ -6,7 +6,6 @@ namespace LUS {
 class SDLAudioPlayer : public AudioPlayer {
   public:
     SDLAudioPlayer();
-    ~SDLAudioPlayer();
 
     int Buffered(void);
     int GetDesiredBuffered(void);

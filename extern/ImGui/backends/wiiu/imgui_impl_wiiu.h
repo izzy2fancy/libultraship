@@ -1,8 +1,5 @@
 // dear imgui: Platform Backend for the Wii U
 #pragma once
-#ifndef IMGUI_DEFINE_MATH_OPERATORS
-#define IMGUI_DEFINE_MATH_OPERATORS
-#endif
 #include "imgui.h"      // IMGUI_IMPL_API
 
 // GamePad Input

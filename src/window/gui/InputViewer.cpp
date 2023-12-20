@@ -3,9 +3,6 @@
 #include "public/bridge/consolevariablebridge.h"
 #include "libultraship/libultra/controller.h"
 #include "Context.h"
-#ifndef IMGUI_DEFINE_MATH_OPERATORS
-#define IMGUI_DEFINE_MATH_OPERATORS
-#endif
 #include <ImGui/imgui.h>
 #include <spdlog/spdlog.h>
 

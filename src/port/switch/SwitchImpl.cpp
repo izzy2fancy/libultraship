@@ -4,9 +4,6 @@
 #include <SDL2/SDL.h>
 #include "SwitchPerformanceProfiles.h"
 #include "public/bridge/consolevariablebridge.h"
-#include <spdlog/spdlog.h>
-#include "Context.h"
-#include "audio/Audio.h"
 
 #include <ImGui/imgui_internal.h>
 
@@ -168,14 +165,8 @@ static void on_applet_hook(AppletHookType hook, void* param) {
                     clkrstSetClockRate(&session, SWITCH_CPU_SPEEDS_VALUES[LUS::STOCK]);
                     clkrstCloseSession(&session);
                 }
-            } else {
+            } else
                 LUS::Switch::ApplyOverclock();
-                // reinitialize audio subsystem to fix audio problems after resuming from sleep
-                // see https://github.com/HarbourMasters/Shipwright/issues/3317
-                SPDLOG_INFO("restarting SDL audio system to work around audio problems on resume");
-                LUS::Context::GetInstance()->GetAudio()->SetAudioBackend(LUS::AudioBackend::SDL);
-            }
-
             break;
 
             /* Performance mode */
