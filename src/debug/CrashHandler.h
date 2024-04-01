@@ -8,7 +8,6 @@
 #include <cstdio>
 #include <cxxabi.h> // for __cxa_demangle
 #include <dlfcn.h>  // for dladdr
-#include <execinfo.h>
 #include <unistd.h>
 #include <SDL.h>
 #endif
